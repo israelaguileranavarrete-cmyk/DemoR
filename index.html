@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con título, descripción e imagen centrada</title>
+    <style>
+        /* Estilos básicos para centrar y dar formato */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, -apple-system, sans-serif;
+            background: #f8f9fc;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+        }
+
+        .card {
+            max-width: 720px;
+            width: 100%;
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #0b1a33;
+            margin-bottom: 0.5rem;
+            border-bottom: 4px solid #eef2f7;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .descripcion {
+            font-size: 1.25rem;
+            color: #2c3e50;
+            line-height: 1.6;
+            margin: 1rem 0 2rem 0;
+            background: #f0f4fe;
+            padding: 0.8rem 1.2rem;
+            border-radius: 60px;
+            display: inline-block;
+            backdrop-filter: blur(2px);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .imagen-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.5rem 0 0.2rem 0;
+        }
+
+        .imagen-wrapper img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 28px;
+            box-shadow: 0 12px 28px -8px rgba(0, 20, 40, 0.25);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.5);
+            background: white;
+            object-fit: cover;
+            max-height: 420px;
+            width: 100%;
+        }
+
+        .imagen-wrapper img:hover {
+            transform: scale(1.01);
+            box-shadow: 0 20px 36px -10px rgba(0, 30, 60, 0.35);
+        }
+
+        /* pequeño pie de foto opcional (solo estético) */
+        .credito {
+            margin-top: 1.2rem;
+            font-size: 0.8rem;
+            color: #7b8a9b;
+            letter-spacing: 0.3px;
+            border-top: 1px solid #e9edf4;
+            padding-top: 1.2rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.3rem;
+        }
+
+        .credito span {
+            background: #eef2f7;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .card {
+                padding: 1.8rem 1rem;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            .descripcion {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- TÍTULO PRINCIPAL -->
+        <h1>Mapa de COVID19 México</h1>
+
+        <!-- BREVE DESCRIPCIÓN -->
+        <div class="descripcion">
+              Actualización de los contagios de COVID19 en México
+        </div>
+
+        <!-- IMAGEN CENTRADA (con wrapper para centrado y control) -->
+        <div class="imagen-wrapper">
+            <img 
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&h=500&fit=crop&crop=center&auto=format"
+                alt="Paisaje sereno de montañas y lago al atardecer"
+                loading="lazy"
+            />
+        </div>
+
+        <!-- Pequeño detalle decorativo (opcional) -->
+        <div class="credito">
+            <span>🏔️ naturaleza</span>
+            <span>·</span>
+            <span>✨ inspiración</span>
+        </div>
+    </div>
+</body>
+</html>
